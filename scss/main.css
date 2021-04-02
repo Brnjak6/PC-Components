@@ -275,7 +275,7 @@ body {
   top: 0;
   right: 0;
   height: 100vh;
-  width: 40vw;
+  width: 100vw;
   background-image: url(../img/background.png);
   background-size: 250px;
   display: none;
@@ -323,7 +323,7 @@ body {
   width: 15px;
   margin: auto;
 }
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 800px) {
   .sidebar__open .sidebar__items .sidebar__item-arrow {
     display: inline-block;
   }
