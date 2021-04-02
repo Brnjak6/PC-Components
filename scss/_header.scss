@@ -194,7 +194,7 @@
         width: 100vw;
         background-image: url(../img/background.png);
         background-size: 250px;
-        display: none;
+        transition: height 900ms ease-in-out;
 
         @media only screen and (max-width: 800px) {
             width: 100vw;
@@ -238,10 +238,11 @@
                 &-arrow {
                     display: none;
                     width: 15px;
+                    height: 100px;
                     margin: auto;
 
-                    @media only screen and (max-width: 800px) {
-                        display: inline-block;
+                    @media only screen and (max-width: 1300px) {
+                        display: block;
                     }
                 }
             }

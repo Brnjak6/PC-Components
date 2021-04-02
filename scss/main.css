@@ -51,6 +51,11 @@ body {
   transform: translateY(200px);
 }
 
+.hidden {
+  display: none;
+  transition: 2s;
+}
+
 .header {
   grid-column: content-start/content-end;
   grid-row: header-start/header-end;
@@ -278,7 +283,7 @@ body {
   width: 100vw;
   background-image: url(../img/background.png);
   background-size: 250px;
-  display: none;
+  transition: height 900ms ease-in-out;
 }
 @media only screen and (max-width: 800px) {
   .sidebar__open {
@@ -321,11 +326,12 @@ body {
 .sidebar__open .sidebar__items .sidebar__item-arrow {
   display: none;
   width: 15px;
+  height: 100px;
   margin: auto;
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1300px) {
   .sidebar__open .sidebar__items .sidebar__item-arrow {
-    display: inline-block;
+    display: block;
   }
 }
 

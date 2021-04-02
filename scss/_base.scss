@@ -80,3 +80,8 @@ body {
     opacity: 0;
     transform: translateY(200px);
 }
+
+.hidden {
+    display: none;
+    transition: 2s;
+}
