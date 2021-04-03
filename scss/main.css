@@ -55,10 +55,6 @@ body {
   display: none;
 }
 
-.visible {
-  right: 0;
-}
-
 .header {
   grid-column: content-start/content-end;
   grid-row: header-start/header-end;
@@ -289,6 +285,7 @@ body {
   transition: 1s cubic-bezier(0.51, 0.26, 0.33, 1.25);
   border-radius: 70% 0 0 70%;
   border-left: 2px solid #970303;
+  opacity: 0;
 }
 .sidebar__open-close-btn {
   position: relative;
@@ -337,6 +334,7 @@ body {
 
 .visible {
   right: 0;
+  opacity: 1;
 }
 
 .intro {

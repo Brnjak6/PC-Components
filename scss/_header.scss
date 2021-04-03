@@ -197,6 +197,7 @@
         transition: 1s cubic-bezier(.51,.26,.33,1.25);
         border-radius: 70% 0 0 70%;
         border-left: 2px solid $color-primary;
+        opacity: 0;
 
         &-close-btn {
             position: relative;
@@ -250,4 +251,5 @@
 
 .visible {
     right: 0;
+    opacity: 1;
 }
