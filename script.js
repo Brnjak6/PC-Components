@@ -9,7 +9,7 @@ const sideBarWide = document.querySelector('.sidebar__wide')
 // Events
 
 burgerIcon.addEventListener('click', function() {
-    burgerMenu.classList.add('visible')
+    burgerMenu.classList.add('visible');
 })
 
 burgerClose.addEventListener('click', function() {

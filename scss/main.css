@@ -19,7 +19,7 @@ html {
   }
 }
 
-body {
+.body {
   font-family: "Play", sans-serif;
   color: #fff;
   background: url(../img/background.png);
@@ -32,12 +32,12 @@ body {
   grid-template-rows: [header-start] 100vh [header-end] auto;
 }
 @media only screen and (max-width: 1100px) {
-  body {
+  .body {
     grid-template-columns: [left-start] 10vw [left-end content-start] repeat(7, [col-start] 1fr [col-end]) [content-end sidebar-start] 10vw [sidebar-end];
   }
 }
 @media only screen and (max-width: 550px) {
-  body {
+  .body {
     background-size: 500px;
   }
 }
@@ -286,11 +286,6 @@ body {
   border-radius: 70% 0 0 70%;
   border-left: 2px solid #970303;
   opacity: 0;
-}
-@media only screen and (min-width: 1100px) {
-  .sidebar__open {
-    display: none;
-  }
 }
 .sidebar__open-close-btn {
   position: relative;
