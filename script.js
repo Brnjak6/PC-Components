@@ -7,19 +7,15 @@ const burgerItems = document.querySelector('.sidebar__items');
 const sideBarWide = document.querySelector('.sidebar__wide')
 
 // Events
-// burgerIcon.addEventListener('click', function () {
-//     burgerMenu.style.display = 'block';
-// })
 
-// burgerClose.addEventListener('click', function () {
-//     burgerMenu.style.display = 'none';
-// })
 burgerIcon.addEventListener('click', function() {
-    burgerMenu.classList.remove('hidden')
+    burgerMenu.classList.add('visible')
 })
+
 burgerClose.addEventListener('click', function() {
-    burgerMenu.classList.add('hidden')
+    burgerMenu.classList.remove('visible')
 })
+
 
 burgerItems.addEventListener('click', function (e) {
     e.preventDefault();

@@ -53,7 +53,10 @@ body {
 
 .hidden {
   display: none;
-  transition: 2s;
+}
+
+.visible {
+  right: 0;
 }
 
 .header {
@@ -278,17 +281,14 @@ body {
 .sidebar__open {
   position: absolute;
   top: 0;
-  right: 0;
+  right: -1100px;
   height: 100vh;
   width: 100vw;
   background-image: url(../img/background.png);
   background-size: 250px;
-  transition: height 900ms ease-in-out;
-}
-@media only screen and (max-width: 800px) {
-  .sidebar__open {
-    width: 100vw;
-  }
+  transition: 1s cubic-bezier(0.51, 0.26, 0.33, 1.25);
+  border-radius: 70% 0 0 70%;
+  border-left: 2px solid #970303;
 }
 .sidebar__open-close-btn {
   position: relative;
@@ -333,6 +333,10 @@ body {
   .sidebar__open .sidebar__items .sidebar__item-arrow {
     display: block;
   }
+}
+
+.visible {
+  right: 0;
 }
 
 .intro {

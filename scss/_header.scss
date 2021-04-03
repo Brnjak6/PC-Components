@@ -189,16 +189,14 @@
     &__open {
         position: absolute;
         top: 0;
-        right: 0;
+        right: -1100px;
         height: 100vh;
         width: 100vw;
         background-image: url(../img/background.png);
         background-size: 250px;
-        transition: height 900ms ease-in-out;
-
-        @media only screen and (max-width: 800px) {
-            width: 100vw;
-        }
+        transition: 1s cubic-bezier(.51,.26,.33,1.25);
+        border-radius: 70% 0 0 70%;
+        border-left: 2px solid $color-primary;
 
         &-close-btn {
             position: relative;
@@ -248,4 +246,8 @@
             }
         }
     }
+}
+
+.visible {
+    right: 0;
 }
