@@ -7,6 +7,7 @@
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 @media only screen and (max-width: 1100px) {
   html {
@@ -20,6 +21,8 @@ html {
 }
 
 .body {
+  position: relative;
+  overflow-x: hidden;
   font-family: "Play", sans-serif;
   color: #fff;
   background: url(../img/background.png);
@@ -27,7 +30,6 @@ html {
   background-repeat: repeat;
   line-height: 1.6;
   display: grid;
-  overflow-x: hidden;
   grid-template-columns: [left-start] 7vw [left-end content-start] repeat(7, [col-start] 1fr [col-end]) [content-end sidebar-start] 7vw [sidebar-end];
   grid-template-rows: [header-start] 100vh [header-end] auto;
 }
