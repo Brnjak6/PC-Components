@@ -277,7 +277,7 @@ body {
 .sidebar__open {
   position: absolute;
   top: 0;
-  right: -1100px;
+  right: -800px;
   height: 100vh;
   width: 100vw;
   background-image: url(../img/background.png);
@@ -286,6 +286,11 @@ body {
   border-radius: 70% 0 0 70%;
   border-left: 2px solid #970303;
   opacity: 0;
+}
+@media only screen and (min-width: 1100px) {
+  .sidebar__open {
+    display: none;
+  }
 }
 .sidebar__open-close-btn {
   position: relative;
