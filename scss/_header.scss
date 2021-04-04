@@ -4,6 +4,7 @@
 
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    min-height: 100vh;
 
     &__text {
         display: flex;

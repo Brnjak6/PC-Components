@@ -62,6 +62,7 @@ html {
   grid-row: header-start/header-end;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  min-height: 100vh;
 }
 .header__text {
   display: flex;
@@ -357,6 +358,11 @@ html {
 .intro__text-main {
   font-size: 2.8rem;
   font-weight: lighter;
+}
+@media only screen and (max-height: 600px) {
+  .intro__text-main {
+    padding-top: 100px;
+  }
 }
 .intro__text-sub {
   margin-top: 5rem;
