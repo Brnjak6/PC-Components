@@ -6,6 +6,8 @@ const burgerClose = document.querySelector('.sidebar__open-close-btn');
 const burgerItems = document.querySelector('.sidebar__items');
 const sideBarWide = document.querySelector('.sidebar__wide')
 
+document.querySelector('.body').
+
 // Events
 
 burgerIcon.addEventListener('click', function() {
