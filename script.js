@@ -4,9 +4,7 @@ const burgerIcon = document.querySelector('.sidebar__burger');
 const burgerMenu = document.querySelector('.sidebar__open');
 const burgerClose = document.querySelector('.sidebar__open-close-btn');
 const burgerItems = document.querySelector('.sidebar__items');
-const sideBarWide = document.querySelector('.sidebar__wide')
-
-document.querySelector('.body').
+const sideBarWide = document.querySelector('.sidebar__wide');
 
 // Events
 

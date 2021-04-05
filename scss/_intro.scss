@@ -173,9 +173,14 @@
 .adv-buttons {
     &--btn {
         @include button;
-        margin: 0 1rem;
+        margin: 1rem 1rem;
         border-radius: 2rem;
         transition: 0.5s;
+
+        @media only screen and (max-width: 950px) {
+        display: flex;
+        flex-direction: column;
+        }
 
         &:active {
             padding: 1.3rem 3rem;
