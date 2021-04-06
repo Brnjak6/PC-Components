@@ -1,12 +1,20 @@
 'use strict';
 
 const burgerIcon = document.querySelector('.sidebar__burger');
+const burgerIconArrs =  document.querySelectorAll('.sidebar__burger-svg');
 const burgerMenu = document.querySelector('.sidebar__open');
 const burgerClose = document.querySelector('.sidebar__open-close-btn');
 const burgerItems = document.querySelector('.sidebar__items');
 const sideBarWide = document.querySelector('.sidebar__wide');
 
 // Events
+
+burgerIcon.addEventListener('mouseover', function() {
+   burgerIconArrs.forEach(arr => arr.style.transform = 'scale(1.1)')
+})
+burgerIcon.addEventListener('mouseout', function() {
+   burgerIconArrs.forEach(arr => arr.style.transform = 'scale(1)')
+})
 
 burgerIcon.addEventListener('click', function() {
     burgerMenu.classList.add('visible');
@@ -18,15 +26,6 @@ burgerClose.addEventListener('click', function() {
 
 
 burgerItems.addEventListener('click', function (e) {
-    e.preventDefault();
-
-    if (e.target.classList.contains('sidebar__link')) {
-        const id = e.target.getAttribute('href');
-        document.querySelector(id).scrollIntoView({ behavior: 'smooth' })
-    }
-})
-
-sideBarWide.addEventListener('click', function (e) {
     e.preventDefault();
 
     if (e.target.classList.contains('sidebar__link')) {
@@ -99,24 +98,7 @@ sidebarItems.addEventListener('mouseover', function (e) {
 sidebarItems.addEventListener('mouseout', function (e) {
     burgerItemFocus(e, 1)
 })
-//Mouseover sidebar
-const sidebarFocus = function (e, opacity) {
-    if (e.target.classList.contains('sidebar__link')) {
-        const link = e.target;
-        const siblings = link.closest('.sidebar__wide').querySelectorAll('.sidebar__link');
 
-        siblings.forEach(s => {
-            if (s !== link) s.style.opacity = opacity;
-        })
-    }
-}
-
-sideBarWide.addEventListener('mouseover', function (e) {
-    sidebarFocus(e, 0.5)
-})
-sideBarWide.addEventListener('mouseout', function (e) {
-    sidebarFocus(e, 1)
-})
 
 //Revealing elements 
 const sectionsAll = document.querySelectorAll('.section');
