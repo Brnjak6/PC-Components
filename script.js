@@ -5,7 +5,6 @@ const burgerIconArrs =  document.querySelectorAll('.sidebar__burger-svg');
 const burgerMenu = document.querySelector('.sidebar__open');
 const burgerClose = document.querySelector('.sidebar__open-close-btn');
 const burgerItems = document.querySelector('.sidebar__items');
-const sideBarWide = document.querySelector('.sidebar__wide');
 
 // Events
 
@@ -28,7 +27,7 @@ burgerClose.addEventListener('click', function() {
 burgerItems.addEventListener('click', function (e) {
     e.preventDefault();
 
-    if (e.target.classList.contains('sidebar__link')) {
+    if (e.target.classList.contains('sidebar__item-a')) {
         const id = e.target.getAttribute('href');
         document.querySelector(id).scrollIntoView({ behavior: 'smooth' })
     }
@@ -56,6 +55,15 @@ tabsContainer.addEventListener('click', function (e) {
 
     }
 
+})
+
+burgerItems.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    if(e.target.classList.contains('sidebar__link')) {
+        const id = e.target.getAttribute('href');
+        document.querySelector(id).scrollIntoView({behavior: 'smooth'})
+    }
 })
 
 //Mouseover and mouseout
