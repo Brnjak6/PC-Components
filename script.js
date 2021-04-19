@@ -1,25 +1,25 @@
 'use strict';
 
 const burgerIcon = document.querySelector('.sidebar__burger');
-const burgerIconArrs =  document.querySelectorAll('.sidebar__burger-svg');
+const burgerIconArrs = document.querySelectorAll('.sidebar__burger-svg');
 const burgerMenu = document.querySelector('.sidebar__open');
 const burgerClose = document.querySelector('.sidebar__open-close-btn');
 const burgerItems = document.querySelector('.sidebar__items');
 
 // Events
 
-burgerIcon.addEventListener('mouseover', function() {
-   burgerIconArrs.forEach(arr => arr.style.transform = 'scale(1.1)')
+burgerIcon.addEventListener('mouseover', function () {
+    burgerIconArrs.forEach(arr => arr.style.transform = 'scale(1.1)')
 })
-burgerIcon.addEventListener('mouseout', function() {
-   burgerIconArrs.forEach(arr => arr.style.transform = 'scale(1)')
+burgerIcon.addEventListener('mouseout', function () {
+    burgerIconArrs.forEach(arr => arr.style.transform = 'scale(1)')
 })
 
-burgerIcon.addEventListener('click', function() {
+burgerIcon.addEventListener('click', function () {
     burgerMenu.classList.add('visible');
 })
 
-burgerClose.addEventListener('click', function() {
+burgerClose.addEventListener('click', function () {
     burgerMenu.classList.remove('visible')
 })
 
@@ -57,12 +57,12 @@ tabsContainer.addEventListener('click', function (e) {
 
 })
 
-burgerItems.addEventListener('click', function(e) {
+burgerItems.addEventListener('click', function (e) {
     e.preventDefault();
 
-    if(e.target.classList.contains('sidebar__link')) {
+    if (e.target.classList.contains('sidebar__item')) {
         const id = e.target.getAttribute('href');
-        document.querySelector(id).scrollIntoView({behavior: 'smooth'})
+        document.querySelector(id).scrollIntoView({ behavior: 'smooth' })
     }
 })
 
