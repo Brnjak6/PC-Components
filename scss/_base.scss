@@ -1,9 +1,9 @@
 $color-primary: #970303;
 $color-text: #fff;
 $font-primary: "Play", sans-serif;
-$linear-amd: linear-gradient(to right, rgba(255, 0, 0, 0.774), rgba(175, 79, 79, 0.877));
-$linear-nvidia-intel: linear-gradient(to right, rgb(45, 219, 1), rgb(33, 139, 200));
-$linear-alternate: linear-gradient(to right, rgb(255, 0, 212), rgba(255, 0, 221, 0.431));
+$amd: red;
+$nvidia-intel: cyan;
+$alternate: pink;
 
 @mixin svg {
     height: 7rem;

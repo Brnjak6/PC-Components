@@ -62,7 +62,9 @@ burgerItems.addEventListener('click', function (e) {
 
     if (e.target.classList.contains('sidebar__item')) {
         const id = e.target.getAttribute('href');
-        document.querySelector(id).scrollIntoView({ behavior: 'smooth' })
+        document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+        burgerMenu.classList.remove('visible')
+
     }
 })
 
@@ -105,27 +107,4 @@ sidebarItems.addEventListener('mouseover', function (e) {
 })
 sidebarItems.addEventListener('mouseout', function (e) {
     burgerItemFocus(e, 1)
-})
-
-
-//Revealing elements 
-const sectionsAll = document.querySelectorAll('.section');
-
-const revealSection = function (entries, observer) {
-    const [entry] = entries;
-
-    if (!entry.isIntersecting) return;
-
-    entry.target.classList.remove('section--hidden');
-    observer.unobserve(entry.target)
-}
-
-const sectionObserver = new IntersectionObserver(revealSection, {
-    root: null,
-    threshold: 0.10,
-})
-
-sectionsAll.forEach(section => {
-    sectionObserver.observe(section)
-    section.classList.add('section--hidden')
 })

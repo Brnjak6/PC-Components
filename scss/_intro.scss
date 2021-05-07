@@ -23,6 +23,10 @@
             margin-top: 5rem;
             font-size: 2.2rem;
             font-weight: lighter;
+
+             @media only screen and (max-width: 450px) {
+            font-size: 2.4rem;
+        }
         }
     }
     &__line {
@@ -54,6 +58,9 @@
     @media only screen and (max-width: 930px) {
         width: 40%;
     }
+    @media only screen and (max-width: 450px) {
+            width: 80vw;
+        }
 
     &__svg {
         @include svg();
@@ -72,6 +79,10 @@
     &__description {
         font-size: 1.8rem;
         letter-spacing: 0.2rem;
+
+         @media only screen and (max-width: 450px) {
+            font-size: 2.4rem;
+        }
     }
 }
 
@@ -104,6 +115,11 @@
     width: 40%;
     padding: 3rem;
 
+    @media only screen and (max-width: 450px) {
+            width: 80%;
+        }
+
+
     &__svg {
         @include svg;
         margin-left: 2rem;
@@ -111,6 +127,7 @@
         @media only screen and (max-width: 1100px) {
             margin-left: 3.5rem;
         }
+        
     }
 
     &__name {
@@ -121,6 +138,10 @@
     &__description {
         font-size: 1.5rem;
         letter-spacing: 0.2rem;
+
+        @media only screen and (max-width: 450px) {
+            font-size: 2.4rem;
+        }
     }
 }
 
@@ -144,6 +165,11 @@
         margin: 5rem 0;
         width: 65%;
 
+         @media only screen and (max-width: 450px) {
+            font-size: 2.5rem;
+            width: 90%;
+        }
+
         &-active {
             display: block;
         }
@@ -155,13 +181,13 @@
             display: none;
 
             &-1 {
-                background: $linear-amd;
+                background: $amd;
             }
             &-2 {
-                background: $linear-nvidia-intel;
+                background: $nvidia-intel;
             }
             &-3 {
-                background: $linear-alternate;
+                background: $alternate;
             }
             &--active {
                 display: block;
@@ -171,6 +197,7 @@
 }
 
 .adv-buttons {
+    
     &--btn {
         @include button;
         margin: 1rem 1rem;
@@ -182,19 +209,23 @@
         flex-direction: column;
         }
 
+         @media only screen and (max-width: 450px) {
+            font-size: 2.2rem;
+        }
+
         &:active {
-            padding: 1.3rem 3rem;
+            padding: 1.3rem 2rem;
         }
     }
 
     &--1 {
-        background: $linear-amd;
+        background: $amd;
     }
     &--2 {
-        background: $linear-nvidia-intel;
+        background: $nvidia-intel;
     }
     &--3 {
-        background: $linear-alternate;
+        background: $alternate;
     }
 
     &--active {
