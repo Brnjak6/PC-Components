@@ -30,6 +30,7 @@ html {
   background-repeat: repeat;
   line-height: 1.6;
   display: grid;
+  -webkit-tap-highlight-color: transparent;
   grid-template-columns: [left-start] 7vw [left-end content-start] repeat(7, [col-start] 1fr [col-end]) [content-end sidebar-start] 7vw [sidebar-end];
   grid-template-rows: [header-start] 100vh [header-end] auto;
 }
@@ -280,6 +281,11 @@ html {
   margin-top: 90px;
   margin-right: 30px;
 }
+@media only screen and (max-width: 550px) {
+  .sidebar__open-close-btn {
+    margin-top: 30px;
+  }
+}
 .sidebar__open-close-btn img {
   width: 50px;
   height: 50px;
@@ -512,7 +518,7 @@ html {
   text-align: left;
 }
 .advantages--description {
-  font-size: 2.2rem;
+  font-size: 2.6rem;
   display: none;
   margin: 5rem 0;
   width: 65%;
@@ -533,13 +539,13 @@ html {
   display: none;
 }
 .advantages--description-line-1 {
-  background: red;
+  background: linear-gradient(to left bottom, #370505, #610512, #8e0317, #bc0518, #eb1212);
 }
 .advantages--description-line-2 {
-  background: cyan;
+  background: linear-gradient(to left bottom, #07143b, #152867, #263e95, #3954c7, #4e6cfb);
 }
 .advantages--description-line-3 {
-  background: pink;
+  background: linear-gradient(to left bottom, #620c66, #852e8a, #a94daf, #cf6cd6, #f58cff);
 }
 .advantages--description-line--active {
   display: block;
@@ -558,6 +564,7 @@ html {
   margin: 1rem 1rem;
   border-radius: 2rem;
   transition: 0.5s;
+  opacity: 0.7;
 }
 .adv-buttons--btn:active {
   padding: 1.6rem 3.5rem;
@@ -570,6 +577,7 @@ html {
   .adv-buttons--btn {
     display: flex;
     flex-direction: column;
+    margin: 2rem;
   }
 }
 @media only screen and (max-width: 450px) {
@@ -577,20 +585,28 @@ html {
     font-size: 2.2rem;
   }
 }
-.adv-buttons--btn:active {
+.adv-buttons--btn--active {
   padding: 1.3rem 2rem;
 }
 .adv-buttons--1 {
-  background: red;
+  background: linear-gradient(to left bottom, #370505, #610512, #8e0317, #bc0518, #eb1212);
 }
 .adv-buttons--2 {
-  background: cyan;
+  background: linear-gradient(to left bottom, #07143b, #152867, #263e95, #3954c7, #4e6cfb);
 }
 .adv-buttons--3 {
-  background: pink;
+  background: linear-gradient(to left bottom, #620c66, #852e8a, #a94daf, #cf6cd6, #f58cff);
 }
-.adv-buttons--active {
-  transform: translateY(-10px);
+.adv-buttons--active:active, .adv-buttons--active:focus {
+  border: 1px solid #fff;
+  opacity: 1;
+}
+@media only screen and (min-width: 940px) {
+  .adv-buttons--active {
+    transform: translateY(-10px);
+    opacity: 1;
+    border: 1px solid #fff;
+  }
 }
 
 .examples {
