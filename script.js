@@ -29,15 +29,6 @@ burgerClose.addEventListener("click", function () {
   window.removeEventListener("scroll", noScroll);
 });
 
-burgerItems.addEventListener("click", function (e) {
-  e.preventDefault();
-
-  if (e.target.classList.contains("sidebar__item-a")) {
-    const id = e.target.getAttribute("href");
-    document.querySelector(id).scrollIntoView({ behavior: "smooth" });
-  }
-});
-
 //Tabbed component
 const tabs = document.querySelectorAll(".adv-buttons--btn");
 const tabsContainer = document.querySelector(".adv-buttons");
@@ -71,7 +62,9 @@ tabsContainer.addEventListener("click", function (e) {
 burgerItems.addEventListener("click", function (e) {
   e.preventDefault();
 
-  if (e.target.classList.contains("sidebar__item")) {
+  window.removeEventListener("scroll", noScroll);
+
+  if (e.target.classList.contains("sidebar__link")) {
     const id = e.target.getAttribute("href");
     document.querySelector(id).scrollIntoView({ behavior: "smooth" });
     burgerMenu.classList.remove("visible");
