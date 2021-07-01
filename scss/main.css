@@ -735,6 +735,7 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 25rem;
 }
 .ending__text {
   margin-top: 10rem;
